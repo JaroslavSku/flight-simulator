@@ -19,17 +19,4 @@ export class PassengerService {
   async findAll(): Promise<IPassenger[]> {
     return await this.model.find();
   }
-
-  async findById(id: string) {
-    return await this.model.findById(id);
-  }
-
-  async update(id: string, dto: passengerDto) {
-    return await this.model.findByIdAndUpdate(id, dto, { new: true });
-  }
-
-  async deleteById(id: string) {
-    await this.model.findByIdAndDelete(id);
-    return 'DELETED';
-  }
 }

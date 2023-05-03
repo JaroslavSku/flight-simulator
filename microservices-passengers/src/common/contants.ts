@@ -9,6 +9,6 @@ export enum UserMSG {
 }
 
 export enum PassengerMSG {
-  CREATE = 'CREATE_PASSENER',
+  CREATE = 'CREATE_PASSENGER',
   FIND_ALL = 'FIND_PASSENGER',
 }

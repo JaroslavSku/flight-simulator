@@ -10,7 +10,6 @@ export class UserController {
 
   @MessagePattern(UserMSG.CREATE)
   createUser(@Payload() dto: UserDTO) {
-    console.log('test', dto);
     return this.userService.createUser(dto);
   }
 }

@@ -19,12 +19,4 @@ export class FlightService {
   async findAll() {
     return await this.model.find();
   }
-
-  async update(id: string, flightDto: FlightDTO) {
-    return await this.model.findByIdAndUpdate(id, flightDto, { new: true });
-  }
-
-  async delete(id: string) {
-    return await this.model.findByIdAndDelete(id);
-  }
 }

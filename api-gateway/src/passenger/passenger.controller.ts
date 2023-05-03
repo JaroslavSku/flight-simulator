@@ -9,7 +9,6 @@ export class PassengerController {
   _clientProxyPassengers = this.clientProxy.clientProxyPassengers();
   @Post()
   createPassenger(@Body() passengerDTO: PassengerDTO) {
-    console.log('test');
     return this._clientProxyPassengers.send(PassengerMSG.CREATE, passengerDTO);
   }
 }
