@@ -12,6 +12,6 @@ async function bootstrap() {
     },
   });
   await app.listen();
-  console.log('microservice passangers listinge');
+  console.log('microservice passengers listening');
 }
 bootstrap();

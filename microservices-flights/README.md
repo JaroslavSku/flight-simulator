@@ -1,6 +1,6 @@
 ## Description
 
-Test repository of micro services. The idea behind is to practice working with RabbitMQ and Microservices.
+Microservice
 
 ## Installation
 
