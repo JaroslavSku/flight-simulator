@@ -1,5 +1,5 @@
 import { UserMSG } from './../common/contants';
-import { Controller, Post, Body } from '@nestjs/common';
+import { Controller, Post, Body, Get } from '@nestjs/common';
 import { ClientProxySuperFlights } from 'src/common/proxy/client-proxy';
 import { UserDTO } from './dto/user.dto';
 
@@ -12,5 +12,10 @@ export class UserController {
   @Post()
   createUser(@Body() userDTO: UserDTO) {
     return this._clientProxyUser.send(UserMSG.CREATE, userDTO);
+  }
+
+  @Get()
+  getAllUsers() {
+    return this._clientProxyUser.send(UserMSG.FIND_ALL, '');
   }
 }

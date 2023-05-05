@@ -12,4 +12,9 @@ export class UserController {
   createUser(@Payload() dto: UserDTO) {
     return this.userService.createUser(dto);
   }
+
+  @MessagePattern(UserMSG.FIND_ALL)
+  findAllUsers() {
+    return this.userService.getAllUsers();
+  }
 }

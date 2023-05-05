@@ -21,4 +21,8 @@ export class UserService {
     const userModel = new this.model({ ...dto, password: hashedPassword });
     return await userModel.save();
   }
+
+  getAllUsers() {
+    return this.model.find();
+  }
 }

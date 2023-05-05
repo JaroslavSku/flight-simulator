@@ -1,4 +1,4 @@
-import { Body, Controller, Post } from '@nestjs/common';
+import { Body, Controller, Post, Get } from '@nestjs/common';
 import { PassengerMSG } from 'src/common/contants';
 import { ClientProxySuperFlights } from 'src/common/proxy/client-proxy';
 import { PassengerDTO } from './dto/passenger.dto';
@@ -10,5 +10,10 @@ export class PassengerController {
   @Post()
   createPassenger(@Body() passengerDTO: PassengerDTO) {
     return this._clientProxyPassengers.send(PassengerMSG.CREATE, passengerDTO);
+  }
+
+  @Get()
+  getAllPassengers() {
+    return this._clientProxyPassengers.send(PassengerMSG.FIND_ALL, '');
   }
 }
